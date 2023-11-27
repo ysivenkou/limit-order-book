@@ -1,0 +1,22 @@
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-width: 200px;
+    height: 100%;
+    background-color: #f3f3f3;
+}
+
+.sidebarItem {
+    height: 30px;
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebarItem:hover {
+    background-color: #d9d9d9;
+}

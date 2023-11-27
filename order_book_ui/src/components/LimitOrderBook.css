@@ -1,0 +1,7 @@
+.orderTypeCell {
+    font-weight: bold;
+}
+
+.OrderBookItem > td {
+    width: 33%;
+}

@@ -1,0 +1,40 @@
+.CreateOrderForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+input, select, button {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.createOrderButton {
+    height: 35px;
+    padding: 14px 15px 0;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #207ae7;
+}
+
+.submitOrderButton {
+    border-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #207ae7;
+}
+
+.submitOrderButton:hover {
+    cursor: pointer;
+}

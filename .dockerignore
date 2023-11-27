@@ -1,0 +1,7 @@
+pg_data/
+.gitignore
+.git/
+.dockerignore
+.idea/
+docker-compose.yml
+Dockerfile

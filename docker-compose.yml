@@ -1,0 +1,44 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=order_book_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+
+  rabbitmq:
+    image: rabbitmq:management
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./order_book_app/:/app/
+    command: [ 'python', 'manage.py', 'runserver']
+    depends_on:
+      - db
+      - worker
+
+  worker:
+    build:
+      context: .
+    command: [ 'celery', '-A', 'order_book_app', 'worker', '-l', 'INFO' ]
+    environment:
+      - BROKER_URL=amqp://guest:guest@rabbitmq:5672//
+    volumes:
+      - ./order_book_app/:/app/
+    depends_on:
+      - rabbitmq

@@ -1,0 +1,74 @@
+.App {
+    height: 100%;
+}
+
+body {
+    margin: 0
+}
+
+#root {
+    height: 100%;
+}
+
+div {
+
+}
+
+.layoutContent {
+    box-sizing: content-box;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Orderbook {
+    box-sizing: content-box;
+    margin: 30px;
+}
+
+h1 {
+
+}
+
+.componentContainer {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.simpleTable > tbody > tr:nth-child(even), .simpleTable > thead > tr {
+    background-color: #F3F3F3;
+}
+
+.tableWithBorders > tbody > tr:nth-child(even), .simpleTable > thead > tr {
+    background-color: #F3F3F3;
+}
+
+.tableWithBorders > thead > tr > th, .tableWithBorders > tbody > tr > td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+}
+
+td, th {
+    vertical-align: text-top;
+    text-align: center;
+    padding: 10px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+

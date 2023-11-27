@@ -1,0 +1,43 @@
+.usernameContainer {
+    width: 150px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: black;
+    text-align: center;
+    height: 100px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.layout > header {
+    background-color: #207ae7;
+    height: 50px
+}
+
+.popupMenu {
+    position: absolute;
+    font-weight: bold;
+    list-style: none;
+    top: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: text-bottom;
+    margin: 0;
+    height: 50px;
+    width: 100px;
+}
+
+.popupMenuItem {
+    height: 50px;
+    width: 100px;
+    background-color: #f3f3f3;
+}
+
+.popupMenu > li:hover {
+    cursor: pointer;
+    background-color: #d9d9d9;
+}

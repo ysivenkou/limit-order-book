@@ -1,0 +1,9 @@
+.cancelOrderButton {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+    border-radius: 10px;
+    color: #FFFFFF;
+    /*padding-left: 1px;*/
+    /*padding-bottom: 1px;*/
+}
